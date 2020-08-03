@@ -1,0 +1,54 @@
+<h2>Practice works - 1!</h2>
+<!-- ngFor -->
+<div class="p-2">
+  <p>*ngFor</p>
+  <ul>
+    <li *ngFor="let game of games">
+      {{ game }}
+    </li>
+  </ul>
+  <!-- ngIf -->
+  <p *ngIf="games.length > 3">There are many games!</p>
+  <!-- ngIf -->
+</div>
+<!-- ngFor -->
+<hr>
+<!-- ngTemplate -->
+<div class="p-2">
+  <p>*ngTemplate</p>
+  <div *ngTemplateOutlet="ngTemplateSample"></div>
+  <ng-template #ngTemplateSample>
+    <span>{{infoList.name}}</span>: <span>{{infoList.id}}</span>
+  </ng-template>
+</div>
+<!-- ngTemplate -->
+<hr>
+<!-- ngIFElse -->
+
+<div class="p-2">
+  <p>*ngIfElse</p>
+  <button class="btn btn-primary" (click)="showInfo = !showInfo">
+    {{showInfo ? 'hideInfo' : 'showInfo'}}
+  </button>
+  <p>showInfo: {{showInfo}}</p>
+</div>
+
+
+<div class="p-2">
+  <div *ngIf="showInfo; else toHideInfo">
+    <p [ngStyle]="{'color': 'green'}">Info Color Green</p>
+  </div>
+  <ng-template #toHideInfo>
+    <p [ngStyle]="{'color': 'blue'}">Info Color blue</p>
+  </ng-template>
+</div>
+<!-- ngIFElse -->
+<hr>
+<!--Event Handle-->
+<div class="p-2">
+  <p>*click</p>
+  <button class="btn btn-warning" (click)="onClickMe()">Click me!</button>
+  <p>{{clickMessage}}</p>
+</div>
+<!--Event Handle-->
+<hr>

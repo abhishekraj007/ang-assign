@@ -1,0 +1,41 @@
+<div class="">
+  <h4> Property Binding </h4>
+  <div class="row">
+    <div class="col-3 m-3">
+      <img src={{imageUrlBind}}>
+    </div>
+    <div class="col-3 m-3">
+      <img [src]='imageUrlBind'>
+      <!-- <img src='http://example.com/{{imageUrlBind}}'> -->
+    </div>
+    <div class="col-3 m-3">
+      <img bind-src=imageUrlBind>
+    </div>
+    <div class="col-3 m-3">
+      <h4>Event</h4>
+      <button class="btn btn-success" (click)="onSave()">Save</button>
+    </div>
+    <div class="col-3 m-3">
+      <h4>Two-way</h4>
+      <input type="text" name="value" placeholder="Two-way bind" [(ngModel)]="value">
+      <p> You entered {{value}}</p>
+      <button class="btn btn-info" (click)="clearValue()">Clear</button>
+    </div>
+    <div class="col-3 m-3">
+      <h4>Style</h4>
+      <button class="btn" [style.color]="isSpecial ? 'red' : 'green'">isSpecial</button>
+    </div>
+    <div class="col-12 m-3">
+      <h5>Sum:</h5>
+      <input class="m-1" [(ngModel)]=numberA placeholder="First number" type="number" />
+      <input class="m-1" [(ngModel)]=numberB placeholder="Second number" type="number" />
+      <button class="btn btn-info">{{numberA + numberB}} </button>
+      <p>Expression: {{ 5 + 5 }}</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- <button [disabled]="isUnchanged">Disabled Button</button>
+
+<p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p> -->

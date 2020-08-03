@@ -1,0 +1,43 @@
+# WEEK 1
+
+=============================================================
+Environment setup,Angular CLI commands,basic app
+=============================================================
+
+1. Setup environment required for angularjs
+ - Visual Studio - Editor
+
+---------------------------------------------------------------
+2. Angular CLI commands
+
+npm install -g @angular/cli
+ng new my-angular
+cd my-angular
+ng serve
+
+---------------------------------------------------------------
+3. Knowing Typescript basics,How does it runs on browser?
+
+npm install -g typescript
+tsc my-typescript.ts
+
+---------------------------------------------------------------
+4. Create a simple page using angularjs
+
+bundle 
+
+---------------------------------------------------------------
+5. Link the project to your github handle 
+
+https://github.com/Radhamani12/my-angular"
+
+---------------------------------------------------------------
+
+=============================================================
+Reference
+=============================================================
+https://cli.angular.io 
+https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+
+
+=============================================================
